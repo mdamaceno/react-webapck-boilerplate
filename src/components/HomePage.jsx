@@ -1,7 +1,7 @@
 import React from 'react';
-import './Index.css';
+import './HomePage.css';
 
-const Index = () => {
+const HomePage = () => {
   return (
     <div>
       <p>Index page</p>
@@ -9,4 +9,4 @@ const Index = () => {
   );
 }
 
-export default Index;
+export default HomePage;

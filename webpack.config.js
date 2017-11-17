@@ -12,7 +12,7 @@ const BUILD_DIR = path.resolve(__dirname, 'dist');
 const APP_DIR = path.resolve(__dirname, 'src');
 
 module.exports = {
-  entry: `${APP_DIR}/index.js`,
+  entry: `${APP_DIR}/app.jsx`,
   output: {
     path: BUILD_DIR,
     filename: 'bundle.js',
@@ -21,7 +21,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         include: APP_DIR,
         exclude: /node_modules/,
         loader: 'babel-loader'
@@ -53,7 +53,7 @@ module.exports = {
       'dist'
     ]),
     new HtmlWebpackPlugin({
-      template: `${APP_DIR}/index.html`
+      template: `${APP_DIR}/app.html`
     }),
     extractCss
   ],
