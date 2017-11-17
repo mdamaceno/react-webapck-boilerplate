@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 import routes from './routes';
 
-const MappedRoutes = () => {
+const MappedRoutes = ({ routes }) => {
   return routes.childRoutes.map((route, i) =>
     (<Route exact path={ route.path } component={ route.component } key={ i } />)
   );
@@ -15,6 +15,6 @@ const MappedRoutes = () => {
 
 render(
   <Router history={ browserHistory }>
-    <MappedRoutes/>
+    <MappedRoutes routes={ routes } />
   </Router>
   , document.getElementById('root'));
